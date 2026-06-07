@@ -1,16 +1,56 @@
-# React + Vite
+# React Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple task management app built with React, Redux, and Vite. Create, edit, filter, and manage tasks with persistent local storage.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ✅ Create and delete tasks
+- 🎯 Priority levels (Low, Medium, High)
+- 🔍 Search and filter tasks
+- ✓ Mark tasks as complete
+- 💾 Auto-save to local storage
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Redux Toolkit
+- Vite
+- Lucide React (icons)
+- Sonner (notifications)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+The app will run at `http://localhost:5173`
+
+## Usage
+
+1. **Add Task** - Enter a title, select priority, and click "Add Task"
+2. **Search** - Use the search bar to find tasks
+3. **Filter** - Select a priority level to filter tasks
+4. **Complete** - Click the checkbox to mark a task as done
+5. **Edit** - Click the edit icon to modify a task
+6. **Delete** - Click the trash icon to remove a task
+
+Tasks are automatically saved to browser local storage.
+
+## Project Structure
+
+```
+src/
+├── components/       # React components (FilterBar, TaskCard, TaskInput, TaskList, Header)
+├── redux/           # Redux store and tasksSlice
+├── App.jsx          # Main app component
+└── index.jsx        # Entry point
+```
+
+## Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
